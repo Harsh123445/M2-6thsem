@@ -1,0 +1,34 @@
+
+Program: 
+kill(all)$
+linsolve_params:false$
+EQ:[2*x+y+z=10,3*x+2*y+3*z=18,x+4*y+9*z=16]$
+X:[x,y,z]$
+S:linsolve(EQ,X)$
+print(“Given System of Equations is”)$
+while EQ # [ ] do disp(pop(EQ))$
+if length(S)=0 then 
+print(“Given system has no solution”)
+elseif length(S)=length(X) then 
+print(“Given system has unique solution”) and
+print(“ Required solution is”,S)
+else print(“Given system has infinite solutions”) and
+print(“ Required solution is”,S)$
+
+Write a program to test consistency and find solution if consistent of given system 
+of equations by Gaussian elimination:
+7𝑥 + 𝑦 − 5𝑧 = 4, 5𝑥 − 2𝑦 + 𝑧 = 4, 2𝑥 + 3𝑦 − 6𝑧 = 0
+kill(all)$
+linsolve_params:false$
+EQ:[7*x+y-5*z=4,5*x-2*y+z=4,2*x+3*y-6*z=0]$
+X:[x,y,z]$
+S:linsolve(EQ,X)$
+print(“Given System of Equations is”)$
+while EQ # [ ] do disp(pop(EQ))$
+if length(S)=0 then 
+print(“Given system has no solution”)
+elseif length(S)=length(X) then 
+print(“Given system has unique solution”) and
+print(“ Required solution is”,S)
+else print(“Given system has infinite solutions”) and
+print(“ Required solution is”,S)$
